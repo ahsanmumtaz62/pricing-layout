@@ -1,0 +1,142 @@
+:root {
+    --background-color: rgb(247, 246, 246);
+    --primary-color: rgb(235, 99, 21);
+    --secondary-color: rgb(116, 116, 116);
+    --text-color: rgb(167, 167, 167);
+    --card-background: white;
+    --white-color: white;
+    --spacing-vertical: 1.7rem
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    background-color: white;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 10rem auto;
+    /* padding: 0 5rem; */
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.box {
+    width: 28rem;
+    background-color: var(--background-color);
+    text-align: center;
+    border-radius: 0.5rem;
+    border: none;
+    transition: .5s all;
+    padding: 2.5rem 5rem;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: var(--spacing-vertical);
+
+}
+
+.price {
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto var(--spacing-vertical);
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    gap: .3rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    
+}
+.amount{
+    font-weight: 400;
+}
+.package{
+    font-weight: 400;
+
+}
+
+.para {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: var(--spacing-vertical);
+    color: var(--text-color);
+    line-height: 3rem;
+
+}
+
+.btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* box2 */
+.box.active {
+    background-color: var(--primary-color);
+}
+
+.box.active .heading,
+.box.active .para {
+    color: white;
+}
+
+.box.active .price,
+.box.active .btn {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+
+/* hover effect */
+.box:hover {
+    background-color: var(--primary-color);
+
+}
+
+.box:hover .heading,
+.box:hover .para {
+    color: var(--white-color);
+}
+
+.box:hover .price,
+.box:hover .btn {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.box .heading:hover,
+.box .para:hover,
+.box .price:hover,
+.box .btn:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.box *::selection {
+    background-color: aquamarine;
+    color: deeppink;
+}
