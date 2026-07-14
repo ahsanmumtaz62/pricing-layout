@@ -31,10 +31,12 @@ body {
     /* padding: 0 5rem; */
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 
 .box {
+    width: 100%;
     width: 28rem;
     background-color: var(--background-color);
     text-align: center;
